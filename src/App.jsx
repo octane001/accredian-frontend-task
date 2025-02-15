@@ -3,6 +3,7 @@ import logo from './assets/mobile_ss.png';
 import { useForm } from 'react-hook-form';
 
 const App = () => {
+  
   const [openPopUp, setOpenPopUp] = useState(false);
 
   const {
@@ -13,7 +14,7 @@ const App = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://accredian-backend-task-wr6a.onrender.com', {
+      const response = await fetch('https://accredian-backend-task-wr6a.onrender.com/api/referrals', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
