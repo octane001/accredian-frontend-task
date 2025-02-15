@@ -14,7 +14,7 @@ const App = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://accredian-backend-task-wr6a.onrender.com/api/referrals', {
+      const response = await fetch('https://accredian-backend-task-wr6a.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
