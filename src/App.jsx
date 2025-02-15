@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from './assets/mobile_ss.png';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 const App = () => {
   
@@ -14,15 +15,13 @@ const App = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://accredian-backend-task-wr6a.onrender.com', {
-        method: 'POST',
+      const response = await axios.post('https://accredian-backend-task-wr6a.onrender.com', data, {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(data),
       });
 
-      if (response.ok) {
+      if (response.status === 200) {
         console.log('Submitted successfully!');
         setOpenPopUp(false); // Close popup after successful submission
       } else {
