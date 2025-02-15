@@ -13,7 +13,7 @@ const App = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch('https://accredian-backend-task-hb4k.onrender.com', {
+      const response = await fetch('https://accredian-backend-task-nthj.onrender.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
